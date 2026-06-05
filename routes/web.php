@@ -19,3 +19,7 @@ Route::get('/user-form', function(){
     return view('user-form');
 });
 Route::post('/adduser', [UserController::class, 'addUser']);
+Route::view('url', 'url');
+
+ 
+Route::get('users', [StudentController::class, 'users']);
