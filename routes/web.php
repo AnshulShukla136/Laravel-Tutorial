@@ -10,6 +10,12 @@ Route::get('/', function () {
 
 // Route::get('/user', [UserController::class, 'getUser']);
 
-Route::get('/aboutuser', [UserController::class, 'aboutUser']);
+// Route::get('/aboutuser', [UserController::class, 'aboutUser']);
 
-Route::get('/user/{name}', [UserController::class, 'getUser']);
+// Route::get('/user/{name}', [UserController::class, 'getUser']);
+
+
+Route::get('/user-form', function(){
+    return view('user-form');
+});
+Route::post('/adduser', [UserController::class, 'addUser']);

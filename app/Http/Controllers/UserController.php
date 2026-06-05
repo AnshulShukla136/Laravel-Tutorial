@@ -12,7 +12,14 @@ class UserController extends Controller
     function aboutUser(){
         return "this is about of anshul shukla";
     }
-    function getUserName(){
-        return "Hii";
+    function addUser(Request $req){
+
+        $req->validate([
+            'username' => 'required | min:3 | max:10',
+            'useremail' => 'required | email' ,
+            'usercity' => 'required | max:15',
+            'upload' => 'required|file|mimes:pdf,png|max:5120'
+        ]);
+        return $req;
     }
 }
