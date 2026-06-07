@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 class StudentController extends Controller
 {
     function users(){
-        $users = DB::select('select * from users where id = 1') ;
+        $users = DB::select('select * from test2') ;
         return view('users',['xyz'=>$users]);
     }
 }
