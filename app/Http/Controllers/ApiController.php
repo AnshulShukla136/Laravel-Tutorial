@@ -7,7 +7,8 @@ use App\Models\Student;
 class ApiController extends Controller
 {
     function list(){
-        return Student::all();
+        $users = Student::all();
+        return view('students', ['users' => $users]);
     }
     function addStudent(){
         return "add student";

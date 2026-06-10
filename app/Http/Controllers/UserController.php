@@ -23,7 +23,8 @@ class UserController extends Controller
         return $req;
     }
     function login(Request $req){
-        $req->session()->put('user', $req->input('user'));
+        $name = $req->input('user');
+        $req->session()->put('user', $name);
         // echo session('user');
         return redirect('profile');
     }
